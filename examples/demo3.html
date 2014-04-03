@@ -47,19 +47,24 @@
 
       </div>
 
-      <div class="web-font">
+     <!--  <div class="web-font">
         lets try some webfont
         <ul>
           <li>Gojirra good boy 1</li>
           <li>Gojirra good boy 2</li>
           <li>Gojirra good boy 3</li>
         </ul>
+      </div> -->
+
+      <div class="cross-origin-image">
+        <img src="https://res.cloudinary.com/eightspokes/image/upload/v1377120715/uo40ufkv11a5vkhd4qia.jpg" alt="">
       </div>
     </div>
+
     <button id="generateImage">Click to generate Image</button>
     <div> <h1> Here is a png </h1></div>
     <div style="margin-top: 50px;" id="canvasImg"></div>
-
+      <div style="margin-top: 50px;" id="canvasImg2"></div>
   
     <script src="https://code.jquery.com/jquery-1.10.1.js" type="text/javascript"> </script>
 
@@ -75,7 +80,10 @@
 
             $('#canvasImg').html('<img src="'+canvasImg+'" alt="">');
             
-          }
+          },
+          allowTaint: false,
+          logging: true,
+          useCORS: true
         });
       });
     });
