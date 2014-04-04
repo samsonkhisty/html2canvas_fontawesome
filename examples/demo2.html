@@ -27,6 +27,21 @@
         font-weight: 300;
         font-size: 30px;
       }
+      
+       .linearGradient3 {
+                /* FF 3.6+ */
+                background: -moz-linear-gradient(left, #ff0000, #ffff00, #00ff00);
+                /* Chrome,Safari4+ */
+                background: -webkit-gradient(linear, left top, right top, color-stop(#ff0000), color-stop(#ffff00), color-stop(#00ff00));
+                /* Chrome 10+, Safari 5.1+ */
+                background: -webkit-linear-gradient(left, #ff0000, #ffff00, #00ff00);
+                /* Opera 11.10+ */
+                background: -o-linear-gradient(left, #ff0000, #ffff00, #00ff00);
+                /* IE 10+ */
+                background: -ms-linear-gradient(left, #ff0000, #ffff00, #00ff00);
+                /* W3C */
+                background: linear-gradient(left, #ff0000, #ffff00, #00ff00);
+            }
 
       .gradient-color{
         border-color: #39afea;
@@ -104,6 +119,23 @@
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-xs-5 linearGradient3">
+          
+            Linear Gradient color from tests file (working)
+          
+        </div>
+        <div class="col-xs-2">
+          <button id="generateImage3-3">Click for Image</button>
+        </div>
+        <div class="col-xs-5">
+          <div id="canvasImg3-3">
+          
+          </div>
+        </div>
+      </div>
+
        <div class="row">
         <div class="col-xs-5 gradient-color-2">
           
@@ -246,6 +278,22 @@
           useCORS: true
         });
       });
+
+      $('#generateImage3-3').click(function() {
+        html2canvas($(".linearGradient3"), {
+          onrendered: function(canvas) {
+            // document.body.appendChild(canvas);
+            var canvasImg = canvas.toDataURL("image/png");
+
+            $('#canvasImg3-3').html('<img src="'+canvasImg+'" alt="">');
+            
+          },
+          allowTaint: false,
+          logging: true,
+          useCORS: true
+        });
+      });
+
 
       $('#generateImage4').click(function() {
         html2canvas($("#table-cloth"), {

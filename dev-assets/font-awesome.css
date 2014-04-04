@@ -51,8 +51,8 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url(../dev-assets/OpenSans-BoldItalic-webfont.eot);
-    src: url(../dev-assets/OpenSans-BoldItalic-webfont.eot?#iefix) format('embedded-opentype'),
+    src: local('Open Sans'), local('OpenSans'), url(../dev-assets/OpenSans-BoldItalic-webfont.eot);
+    src: local('Open Sans'), local('OpenSans'), url(../dev-assets/OpenSans-BoldItalic-webfont.eot?#iefix) format('embedded-opentype'),
          url(../dev-assets/OpenSans-BoldItalic-webfont.svg#open_sansbold_italic) format('svg'),
          url(../dev-assets/OpenSans-BoldItalic-webfont.woff) format('woff'),
          url(../dev-assets/OpenSans-BoldItalic-webfont.ttf) format('truetype');
